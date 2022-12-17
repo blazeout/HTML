@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>表单学习</title>
+    <title>表单form以及input按钮学习</title>
 </head>
 <body>
 <h1>
@@ -12,13 +12,91 @@
 action ：表单提交的地方，可以是网站也可以是一个请求处理地址
 method： post get 一般用post
 -->
-<form action="1.%20theFirstWeb.html" method="post">
-  <p>账号 <input type="text" name="username"></p>
+<form action="1.%20theFirstWeb.html" method="get">
+<!--文本输入框：input type="text"
+    value="你好" 默认初始值
+    maxlength="8" 最长能写几个字符
+    size="30" 文本框有多长
+-->
+  <p>账号 <input type="text" name="username" ></p>
   <p>密码 <input type="password" name="password" ></p>
   <p>
     <input type="submit" name="提交">
     <input type="reset" name="重置">
   </p>
+<!--单选框标签
+    input type="radio"
+    value : 单选框的值
+    name ：表示一个组
+-->
+    <p>
+        性别：
+        <input type="radio" value="boy" name="sex" checked>男
+        <input type="radio" value="girl" name="sex">女
+    </p>
+<!--多选框标签 checkbox-->
+    <p>
+        爱好：
+        <input type="checkbox" value="sleep" name="hobby" checked>爱好
+        <input type="checkbox" value="program" name="hobby">巧代码
+        <input type="checkbox" value="chat" name="hobby">聊天
+        <input type="checkbox" value="game" name="hobby">玩游戏
+
+    </p>
+<!--按钮
+    button 普通按钮
+    image  图片按钮
+    submit 提交按钮
+    reset  重置按钮
+-->
+    <p>
+        按钮 <input type="button" name="btn1" value="点击变成"> <br>
+        图片按钮 <input type="image" src="../resource/image/gopher.png" width="300px" height="300px">
+    </p>
+
+<!--多选下拉框 select 和 option-->
+    <p>
+        选择国家：
+        <select name="country" >
+            <option value="china">中国</option>
+            <option value="united states">美国</option>
+            <option value="india">印度</option>
+            <option value="singapore" selected>新加坡</option>
+        </select>
+    </p>
+
+
+<!--文本域 textarea-->
+    <p>
+        填写内容：<textarea name="content" cols="30" rows="5"></textarea>
+    </p>
+<!--文件域 上传文件-->
+    <p>
+        上传文件：
+        <input type="file" name="files">
+        <input type="submit">
+    </p>
+<!--邮箱是 input的email-->
+    <p>邮箱：
+        <input type="email" name="email">
+    </p>
+<!--URL 是input的url-->
+    <p>URL：
+        <input type="url" name="url">
+    </p>
+<!--数字是input的number-->
+    <p>数字：
+        <input type="number" name="num" max="100" min="0" step="9">
+    </p>
+
+<!--滑块 input的range-->
+    <p>音量：
+        <input type="range" name="voice" min="0" max="100" step="10">
+    </p>
+<!--搜索框 input的search-->
+    <p>搜索：
+        <input type="search" name="search">
+    </p>
 </form>
 
 </body>
