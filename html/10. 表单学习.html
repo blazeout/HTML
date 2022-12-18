@@ -17,9 +17,14 @@ method： post get 一般用post
     value="你好" 默认初始值
     maxlength="8" 最长能写几个字符
     size="30" 文本框有多长
+    readonly 只读
+    disabled 禁用
+    hidden   隐藏
+    placeholder 提示作用
+    required 必须
 -->
-  <p>账号 <input type="text" name="username" ></p>
-  <p>密码 <input type="password" name="password" ></p>
+  <p>账号 <input type="text" name="username" placeholder="请输入用户名" required></p>
+  <p>密码 <input type="password" name="pwd" value="123456" disabled></p>
   <p>
     <input type="submit" name="提交">
     <input type="reset" name="重置">
@@ -70,7 +75,7 @@ method： post get 一般用post
     <p>
         填写内容：<textarea name="content" cols="30" rows="5"></textarea>
     </p>
-<!--文件域 上传文件-->
+<!--文件域 上传文件 input的file-->
     <p>
         上传文件：
         <input type="file" name="files">
@@ -96,6 +101,15 @@ method： post get 一般用post
 <!--搜索框 input的search-->
     <p>搜索：
         <input type="search" name="search">
+    </p>
+<!--label标签 增强鼠标的可用性 可指向-->
+    <p>
+        <label for="mark">你点我试试</label>
+        <input type="text" id="mark">
+    </p>
+<!--input的pattern 正则表达式匹配-->
+    <p>自定义邮箱：
+        <input type="text" required pattern="^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$">
     </p>
 </form>
 
