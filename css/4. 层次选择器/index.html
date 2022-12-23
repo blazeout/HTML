@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>层次选择器</title>
+    <style>
+      /*后代选择器：在某个元素后面*/
+      /*body p{*/
+      /*  background: #d985bf;*/
+      /*}*/
+      /*子选择器：选择一代 儿子*/
+      /*body>p{*/
+      /*  background: navy;*/
+      /*}*/
+      /*相邻兄弟选择器 选择同辈向下第一个*/
+      /*.active + p{*/
+      /*  background: darkgreen;*/
+      /*}*/
+      /*通用兄弟选择器 选择当前选中元素向下所有兄弟元素*/
+      .active~p{
+        background: teal;
+      }
+    </style>
+</head>
+<body>
+<p class="active">logo1</p>
+<p>logo2</p>
+<p>logo3</p>
+<ul>
+  <li>
+    <p>logo4</p>
+  </li>
+  <li>
+    <p class="active">logo5</p>
+    <p>logotest</p>
+  </li>
+  <li>
+    <p>logo6</p>
+  </li>
+</ul>
+</body>
+</html>
